@@ -24,8 +24,9 @@ CREATE TABLE IF NOT EXISTS `customers` (
   `email` varchar(50) DEFAULT NULL,
   `website` varchar(50) DEFAULT NULL,
   `password_sha1` varchar(50) DEFAULT NULL,
+  `rank` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`customer_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- Creating structure for table daily_income
 DROP TABLE IF EXISTS `daily_income`;
