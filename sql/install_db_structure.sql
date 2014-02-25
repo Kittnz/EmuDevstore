@@ -1,19 +1,19 @@
 -- --------------------------------------------------------
--- Host:                         127.0.0.1
--- Server version:               5.5.32 - MySQL Community Server (GPL)
--- Server OS:                    Win32
--- HeidiSQL Version:             8.1.0.4545
+-- INSTALL DATABASE STRUCTURE
 -- --------------------------------------------------------
-
 
 -- Dumping structure for table emudevstore.categories
 DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
-  `parent_id` int(11) NOT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `parent_id` int(11) NOT NULL,
+  `has_childs` int(11) NOT NULL DEFAULT '0',
   `title` varchar(255) NOT NULL,
+  `short_title` varchar(255) NOT NULL,
+  `subtitle` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 
 -- Dumping structure for table emudevstore.ci_sessions
@@ -73,12 +73,13 @@ CREATE TABLE IF NOT EXISTS `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL DEFAULT '0',
   `author_id` int(11) DEFAULT NULL,
-  `name` varchar(50) DEFAULT NULL,
+  `category_id` int(11) DEFAULT '1',
+  `name` varchar(255) DEFAULT NULL,
+  `subtitle` varchar(255) DEFAULT NULL,
   `price` int(11) DEFAULT NULL,
-  `thumbnail` varchar(50) DEFAULT NULL,
-  `screenshot` varchar(50) DEFAULT NULL,
+  `screenshot` varchar(255) DEFAULT NULL,
+  `thumbnail` varchar(255) DEFAULT NULL,
   `download` varchar(50) DEFAULT NULL,
-  `category_id` int(11) DEFAULT NULL,
   `description` varchar(50) DEFAULT NULL,
   `paypal_email` varchar(50) DEFAULT NULL,
   `validated` tinyint(4) NOT NULL DEFAULT '0',
@@ -86,3 +87,4 @@ CREATE TABLE IF NOT EXISTS `products` (
   `is_unique` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
