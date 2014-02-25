@@ -5,7 +5,7 @@
     #such as an image or css document, if this isn't true it sends the
     #request to index.php
 
-	RewriteRule ^themes/?$ http://emu-devstore.com/Fusion-CMS/Themes/Products-29
+	RewriteRule ^themes/?$ http://localhost/Fusion-CMS/Themes/Products-29
 	
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
