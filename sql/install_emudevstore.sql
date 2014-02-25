@@ -2,8 +2,9 @@
 -- Creating structure for table categories
 DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
-  `id` varchar(50) DEFAULT NULL,
-  `parent_id` varchar(50) DEFAULT NULL
+  `id` int(11) NOT NULL,
+  `parent_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Creating structure for table ci_sessions
