@@ -11,10 +11,9 @@ DROP TABLE IF EXISTS `ci_sessions`;
 CREATE TABLE IF NOT EXISTS `ci_sessions` (
   `session_id` int(11) NOT NULL,
   `ip_address` varchar(100) NOT NULL,
-  `user_agent` varchar(100) NOT NULL,
+  `user_agent` varchar(255) NOT NULL,
   `last_activity` bigint(20) NOT NULL,
-  `user_data` varchar(100) NOT NULL,
-  PRIMARY KEY (`session_id`)
+  `user_data` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Creating structure for table customers
