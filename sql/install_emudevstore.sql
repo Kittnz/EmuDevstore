@@ -5,13 +5,15 @@
 -- HeidiSQL Version:             8.1.0.4545
 -- --------------------------------------------------------
 
+
 -- Dumping structure for table emudevstore.categories
 DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
-  `id` int(11) NOT NULL,
   `parent_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 
 -- Dumping structure for table emudevstore.ci_sessions
@@ -69,6 +71,7 @@ CREATE TABLE IF NOT EXISTS `paypal_logs` (
 DROP TABLE IF EXISTS `products`;
 CREATE TABLE IF NOT EXISTS `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `product_id` int(11) NOT NULL DEFAULT '0',
   `author_id` int(11) DEFAULT NULL,
   `name` varchar(50) DEFAULT NULL,
   `price` int(11) DEFAULT NULL,
@@ -82,5 +85,4 @@ CREATE TABLE IF NOT EXISTS `products` (
   `downloads` int(11) NOT NULL DEFAULT '0',
   `is_unique` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
