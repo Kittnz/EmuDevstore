@@ -1,0 +1,64 @@
+
+/* ### -- -- -- -- -- ACP Bugfix-Styles for Microsoft Internet Explorer 6 -- -- -- -- -- ### */
+
+/* 
+
+File: ie6-fix.css 
+Copyright 2006-2009 by WoltLab GmbH. 
+
+For full XHTML- & CSS-Compatibility be sure to include this File only within the so called "Internet Explorer Comment Hack". 
+
+*/
+
+#header {
+	position: static;	
+}
+
+#content, #footerContainer {
+	_width: expression(((document.body.clientWidth/screen.width)) < 0.7 ? "800px":"75%" );	
+}
+
+#sidebar img {
+	margin: 14px auto -1px auto;
+}
+
+#userPanel {
+	background-color: #6f92b1;
+}
+
+.mainMenu li { 
+	float: right;
+}
+
+.mainMenu li a {
+	display: block;
+	padding: 5px 5px 7px 5px;
+	margin: 0 !important;
+	border-right-width: 0 !important;
+}
+
+#menuBar {
+	padding-right: 129px;
+	height: 31px !important;
+}
+
+#menuBar span {
+	padding-bottom: 5px;
+	display: block !important;
+}
+
+#menuBar li .pageMenu a {
+	height: 27px;
+}
+
+/* ### -- -- -- -- -- Large Buttons (Blue Sunrise) -- -- -- -- -- ### */
+
+.largeButtons a {
+	display: inline-block;	
+}
+
+.largeButtons a span {
+	display: inline-block;
+}
+
+/* ### -- -- -- -- -- EOF -- -- -- -- -- ### */

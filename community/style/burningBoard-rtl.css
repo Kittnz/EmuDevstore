@@ -1,0 +1,322 @@
+
+/* ### -- -- -- -- -- Special Burning Board 3 Styles -- -- -- -- -- ### */
+
+/* 
+
+File: burningBoard.css 
+Copyright 2006-2011 by WoltLab GmbH. 
+
+*/
+
+/* ### -- -- -- -- -- Miscellaneous -- -- -- -- -- ### */
+
+.hot {
+	font-weight: bold;
+}
+
+.interesting a {
+	font-style: italic;
+}
+
+.threadStarter { /* this class is deprecated */
+	font-style: italic;
+}
+
+.topicQuickEdit {
+	display: none;
+	width: 50%;
+}
+
+.prefix strong {
+	font-weight: normal;
+}
+
+.headlineContainer h1 .prefix {
+	font-size: .7em;
+}
+
+.smallPages {
+	float: left;
+	height: 24px;
+}
+
+.goToNewPost {
+	margin-left: 3px;
+	float: right;
+}
+
+.topic input, .headlineContainer h1 input  {
+	width: 70%;
+}
+
+.threadSort:after {
+	content: "";
+	height: 0;
+	display: block;
+	clear: both;
+}
+
+.breadCrumbs .prefix {
+	text-decoration: none;
+}
+
+.recentActivityBox {
+	padding-bottom: 0;
+}
+
+/* ### -- -- -- -- -- Board List -- -- -- -- -- ### */
+
+#boardlist, #boardlist ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#boardlist {
+	margin-bottom: 20px;
+}
+
+#boardlist .boardlistInner {
+	min-height: 16px;
+}
+
+#boardlist .boardlistInner .smallButtons {
+	clear: both;
+}
+
+#boardlist .boardlistInner:after {
+	display: block;
+	clear: both;
+	height: 0;
+	content: "";
+}
+
+#boardlist .container-1, #boardlist .container-2  {
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+#boardlist li ul .boardlistTitle .containerIcon {
+	margin-right: 35px;
+}
+
+#boardlist li ul .boardlistTitle .containerContent {
+	margin-right: 70px;
+}
+
+#boardlist li ul li ul .boardlistTitle .containerIcon {
+	margin-right: 70px;
+}
+
+#boardlist li ul li ul .boardlistTitle .containerContent {
+	margin-right: 105px;
+}
+
+#boardlist li ul li ul li ul .boardlistTitle .containerIcon {
+	margin-right: 105px;
+}
+
+#boardlist li ul li ul li ul .boardlistTitle .containerContent {
+	margin-right: 140px;
+}
+
+#boardlist .containerContent:after {
+	content: "";
+	height: 0;
+	display: block;
+	clear: both;
+}
+
+#boardlist .container-1, #boardlist .container-2 {
+	padding: 4px;
+}
+
+.boardlistCols-3 {
+	float: right;
+	width: 60%;
+}
+
+.boardlistCols-2 {
+	float: right;
+	width: 80%;
+}
+
+.boardlistTitleLastPostStats {
+	float: right;
+	width: 60%;	
+}
+
+.boardlistLastPost {
+	width: 20%;
+	float: right;
+	overflow: hidden;
+}
+
+.boardlistStats {
+	width: 20%;
+	float: left;
+	font-size: .85em;
+}
+
+.boardlistStats dl, .boardlistStats dd, .boardlistStats dt{
+	margin: 0;
+	padding: 0;
+}
+
+.boardlistStats dt {
+	width: 40%;
+	float: left;
+}
+
+.boardlistStats dd {
+	width: 58%;
+	text-align: left;
+	float: right;
+}
+
+#boardlist .containerHead .boardTitle {
+	width: 99.5%;
+}
+
+#boardlist .boardlistSubboards {
+	margin: 3px 0;
+	padding: 0;
+	min-height: 0;
+}
+
+#boardlist .boardlistSubboards:after {
+	display: block;
+	clear: both;
+	height: 0;
+	content: "";
+}
+
+#boardlist .boardlistSubboards li {
+	margin-left: 2px;
+	float: right;
+}
+
+#boardlist .boardlistSubboards li a {
+	white-space: nowrap;
+}
+
+#boardlist .boardlistSubboards li h4:after, #boardlist .boardlistSubboards li h5:after, #boardlist .boardlistSubboards li h6:after {
+	content: ",";
+}
+
+#boardlist .boardlistSubboards li.last h4:after, #boardlist .boardlistSubboards li.last h5:after, #boardlist .boardlistSubboards li.last h6:after {
+	content: "";
+}
+
+.boardlistUserOnline, .moderators {
+	margin-top: 3px;
+}
+
+.boardlistDescription {
+	margin-bottom: 3px;
+}
+
+/* ### -- -- -- Thread List -- -- -- ###*/
+
+.tableList .columnLastPost {
+	width: 30%;
+}
+
+.tableList .columnLastPost p {
+	text-align: center;
+}
+
+.tableList .columnLastPost .containerContentSmall p {
+	text-align: right;
+}
+
+.tableList .columnTopic {
+	width: 70%;
+}
+
+.tableList .columnTopic div.topic {
+	overflow: hidden;
+}
+
+.tableList .columnViews, .tableList .columnReplies {
+	text-align: center;
+}
+
+.tableList .columnRating, .tableList .columnLastActivity {
+	white-space: nowrap;
+}
+
+/* ### -- -- -- Similar Threads -- -- -- ###*/
+
+.similarThreads {
+	list-style: none;
+	margin-top: 10px;
+	padding: 0;
+}
+
+.similarThreads li {
+	min-height: 0;
+}
+
+.similarThreads .breadCrumbs {
+	margin: 0;
+}
+
+/* ### -- -- -- Moderation Overview -- -- -- ###*/
+
+.moderationOverview {
+	list-style: none;
+	margin: 15px 0 5px 0 !important;
+	padding: 0;
+}
+
+.moderationOverview:after {
+	content: "";
+	height: 0;
+	display: block;
+	clear: both;
+}
+
+.moderationOverview ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.moderationOverview img {
+	margin-left: 5px;
+	float: right;
+}
+
+.moderationOverview li {
+	margin: 0 0 10px 5%;
+	float: right;
+	width: 40%;
+	min-height: 48px;
+}
+
+.moderationOverview li ul li {
+	margin: 3px 0 3px 0;
+	float: none;
+	width: auto;
+	min-height: 0;
+}
+
+/* ### -- -- -- -- -- Delete Post -- -- -- -- -- ### */
+
+.deletePost input[type="submit"] {
+	float: left;
+}
+
+.deletePost .formField {
+	float: right;
+}
+
+.deletePost:after {
+	content: "";
+	height: 0;
+	display: block;
+	clear: both;
+}
+
+/* ### -- -- -- -- -- EOF -- -- -- -- -- ### */

@@ -1,0 +1,29 @@
+
+/* ### -- -- -- -- -- Private Messages Global Styles -- -- -- -- -- ### */
+
+/* 
+
+File: privateMessagesGlobal.css
+Copyright 2006 by WoltLab GmbH. 
+
+*/
+
+/* ### -- -- -- -- -- Miscellaneous -- -- -- -- -- ### */
+
+.pmBoxFull {
+	color: #c00;
+	font-weight: bold;
+}
+
+#pmOutstandingNotifications ul {
+	list-style-type: square;
+	list-style-image: url("../icon/pmEmptyS.png");
+	margin: 5px 0 0 15px;
+	padding: 0 0 0 9px;
+}
+
+#pmOutstandingNotifications ul a {
+	padding-left: 3px;
+}
+
+/* ### -- -- -- -- -- EOF -- -- -- -- -- ### */

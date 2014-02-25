@@ -1,0 +1,107 @@
+
+/* ### -- -- -- -- -- ACP Style-Editor Styles -- -- -- -- -- ### */
+
+/* 
+
+File: styleeditor.css 
+Copyright 2006-2007 by WoltLab GmbH. 
+
+*/
+
+/* ### -- -- -- -- -- Colors -- -- -- -- -- ### */
+
+.colors {
+	background-color: #000;
+	border: 1px solid #000;
+	border-width: 0 1px 1px 0;
+	position: absolute;
+	width: 304px;
+	height: 192px;
+	z-index: 1000;
+}
+
+.colors ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+	float: right;
+	position: relative;
+}
+
+.colors ul:after {
+	content: "";
+	height: 0;
+	display: block;
+	clear: both;
+}
+
+.colors li {
+	font-size: 0; /* ie6 */
+	border: 1px solid #000;
+	border-width: 1px 0 0 1px;
+	display: block;
+	float: right;
+	width: 15px;
+	height: 15px;
+}
+
+.colors a {
+	border: 1px solid transparent;
+	display: block;
+	width: 13px;
+	height: 13px;
+}
+
+.colors a:hover {
+	border: 1px solid #fff !important;
+}
+
+.colors .colorColumn {
+	width: 96px;
+}
+
+.colors .greyColumn {
+	width: 16px;
+}
+
+/* ### -- -- -- -- -- Color Picker -- -- -- -- -- ### */
+
+.colorPicker .formField input {
+	width: auto !important;
+	font-family: "Courier New", Courier, monospace;
+}
+
+.colorPicker .formField img {
+	margin-top: -5px;
+	margin-right: 3px;
+}
+
+.colorPicker .formField img:hover {
+	cursor: pointer;
+}
+
+/* ### -- -- -- -- -- Alignment Preview -- -- -- -- -- ### */
+
+.alignmentPreview .formField img {
+	margin-top: -5px;
+	margin-right: 3px;
+}
+
+/* ### -- -- -- -- -- Miscellaneous -- -- -- -- -- ### */
+
+.styleImage {
+	margin: 5px 10px 5px 0;
+	float: left;
+}
+
+.styleList .formElement:after {
+	clear: none;
+}
+
+/* ### -- -- -- -- -- Special -- -- -- -- -- ### */
+/* Note: this is only a workaround for future length classes */
+
+#tplStyleAdd #styleName, #tplStyleAdd #authorURL, #tplStyleAdd #license, #tplStyleAdd #styleDate, #tplStyleAdd #copyright, #tplStyleAdd #authorName, #tplStyleAdd #authorName, #tplStyleAdd #menu-dropdown-background-image, #tplStyleAdd #menu-dropdown-background-image-hover, #tplStyleAdd #selection-background-image {width: 100% !important;}
+
+/* ### -- -- -- -- -- EOF -- -- -- -- -- ### */

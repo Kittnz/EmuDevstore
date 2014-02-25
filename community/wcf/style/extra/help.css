@@ -1,0 +1,88 @@
+
+/* ### -- -- -- -- -- Help Styles -- -- -- -- -- ### */
+
+/* 
+
+File: help.css 
+Copyright 2006 by WoltLab GmbH. 
+
+*/
+
+/* ### -- -- -- -- -- Help System -- -- -- -- -- ### */
+
+.help .contentBox {
+	line-height: 1.7;
+}
+
+.help .contentBox > p {
+	margin-bottom: 10px;
+}
+
+.help .contentBox li {
+	margin-top: 3px;
+}
+
+.help .contentBox li h5, .help .contentBox li h6 {
+	font-style: italic;
+}
+
+.help .contentBox h4 {
+	font-size: 1.2em;
+	padding: 10px 0 5px 0;
+}
+
+.help .buttonBar {
+	height: 1.2em;
+}
+
+.help .buttonBar p {
+	margin-top: 9px;
+}
+
+.help .contentBox .helpImage {
+	float: right;
+	margin: 0 0 30px 30px;
+	padding: 5px;
+}
+
+.help .contentBox .helpImage span {
+	display: block;
+	margin-top: 5px;
+	text-align: center;
+}
+
+.dataList li:after {
+	clear: none !important;
+}
+
+/* ### -- -- -- -- -- TOC -- -- -- -- -- ### */
+
+.tocHeadline {
+	padding: 9px;
+}
+
+.tocMenu {
+	text-align: left;
+	padding: 10px;
+}
+
+.tocMenu * {
+	padding: 0;
+	margin: 0;
+}
+
+.tocMenu ol {
+	margin-left: 20px;
+}
+
+.tocMenu li {
+	padding: 3px 0;
+}
+
+.tocBack {
+	float: left;
+}
+
+.tocForward {
+	float: right;
+}

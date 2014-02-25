@@ -1,0 +1,6 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2013-10-25 11:24:43 --> Severity: Warning  --> filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for ///is/htdocs/wp11218549_T3EH1XF9TT/www/EmuDevStore/files/523040698c679_file.zip /is/htdocs/wp11218549_T3EH1XF9TT/www/EmuDevStore/application/controllers/account.php 62
+ERROR - 2013-10-25 11:24:43 --> Severity: Warning  --> Cannot modify header information - headers already sent by (output started at /is/htdocs/wp11218549_T3EH1XF9TT/www/EmuDevStore/system/core/Exceptions.php:185) /is/htdocs/wp11218549_T3EH1XF9TT/www/EmuDevStore/application/controllers/account.php 62
+ERROR - 2013-10-25 11:24:43 --> Severity: Warning  --> Cannot modify header information - headers already sent by (output started at /is/htdocs/wp11218549_T3EH1XF9TT/www/EmuDevStore/system/core/Exceptions.php:185) /is/htdocs/wp11218549_T3EH1XF9TT/www/EmuDevStore/application/controllers/account.php 63
+ERROR - 2013-10-25 11:24:43 --> Severity: Warning  --> readfile(///is/htdocs/wp11218549_T3EH1XF9TT/www/EmuDevStore/files/523040698c679_file.zip) [<a href='function.readfile'>function.readfile</a>]: failed to open stream: No such file or directory /is/htdocs/wp11218549_T3EH1XF9TT/www/EmuDevStore/application/controllers/account.php 64

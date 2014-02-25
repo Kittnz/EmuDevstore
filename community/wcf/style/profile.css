@@ -1,0 +1,594 @@
+
+/* ### -- -- -- -- -- Profile Styles -- -- -- -- -- ### */
+
+/* 
+
+File: profile.css 
+Copyright 2006-2010 by WoltLab GmbH. 
+
+*/
+
+/* ### -- -- -- -- -- User Card -- -- -- -- -- ### */
+
+/* -- General -- */
+
+#userCard {
+	line-height: 1.3;
+	margin-bottom: 23px;
+	display: block;
+	clear: both;
+	position: relative;
+}
+
+#userCard:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+/* -- User Card Lists -- */
+
+#userCard ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+#userCard ul:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+#userCardAvatar {
+	margin: 0;
+	padding: 0;
+	float: left;
+	height: 100%;
+}
+
+#userCardAvatar .userAvatar {
+	margin: 13px 25px;
+	padding: 0;
+	float: left;
+}
+
+#userCardAvatar .userAvatar a {
+	display: block;
+}
+
+/* -- Part 2: User Card Credits -- */
+
+#userCardCredits {
+	border-width: 0 0 0 1px;
+	border-style: dotted;
+	margin: 0;
+	padding: 0 25px;
+}
+
+#userCardCredits .userName { /* probably better to make 'userName' a global declaration? -> see messages.css */
+	font-weight: bold;
+}
+
+#userCardCredits .userPersonals {
+	padding-top: 7px;
+	width: 50%;
+	min-height: 59px;
+	overflow: hidden;
+}
+
+#userCardCredits .userPersonals p {
+	padding-bottom: 3px;
+}
+
+#userCardCredits .userStatus {
+	display: block;
+	clear: both;
+}
+
+#userCardCredits .userStatus li {
+	text-decoration: none;
+	display: inline;
+}
+
+#userCardCredits .userStatus li a {
+	text-decoration: none;
+	margin-right: 3px;
+	float: left;
+}
+
+#userCardCredits .userStatus li a img {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+/* Small Buttons Fix */
+
+#userCardCredits .smallButtons {
+	position: absolute;
+	top: 5px;
+	right: 25px;
+}
+
+#userCardCredits .smallButtons li a {
+	text-align: center !important;
+	cursor: pointer;
+}
+
+#userCardCredits .smallButtons img {
+	margin: 0 auto;
+	padding-top: 4px;
+	display: block;
+}
+
+/* -- Friends Connection -- */
+
+/* Displays the line of connections from the viewed user to you with avatars in min 1 and max 5 levels */
+
+.friendsConnection {
+	border-width: 1px 0 0 0;
+	border-style: dotted;
+	margin: 7px 0 0 0;
+	padding: 7px 0 0 0;
+}
+
+.friendsConnection:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+.friendsConnection h3 {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+
+.friendsConnection .avatarFrame {
+	margin: 0 auto;
+	display: block;
+	position: relative;
+	height: 48px;
+	max-width: 48px;
+}
+
+.friendsConnection .avatarFrame img {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.friendsConnection a .avatarCaption {
+	text-decoration: underline;
+	padding-bottom: 5px;
+	display: block;
+}
+
+/* -- Friends Network -- */
+
+/* Displays the amount of users connected with you in three levels  */
+
+.friendsNetwork {
+	border-width: 1px 0 0 0;
+	border-style: dotted;
+	margin: 7px 0 0 0;
+	padding: 7px 0;
+}
+
+.friendsNetwork:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+.friendsNetwork h3 {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+
+.friendsNetwork .digitDisplay {
+	font-size: 2em;
+	font-weight: bold;
+	font-style: italic;
+	background-repeat: no-repeat;
+	background-position: center 2px;
+	padding: 23px 10px 2px 10px !important;
+	display: block;
+	min-height: 18px;
+}
+
+.friendsNetwork .network1 .digitDisplay {
+	background-image: url("../images/network-1.png");
+}
+
+.friendsNetwork .network2 .digitDisplay {
+	background-image: url("../images/network-2.png");
+}
+
+.friendsNetwork .network3 .digitDisplay {
+	background-image: url("../images/network-3.png");
+}
+
+.friendsNetwork a .digitCaption {
+	text-decoration: underline;
+	padding-bottom: 5px;
+	display: block;
+}
+
+/* -- Friends None -- */
+
+/* Displays a message that you currently have no friends */
+
+.friendsNone {
+	border-width: 1px 0 0 0;
+	border-style: dotted;
+	margin: 7px 0 0 0;
+	padding: 7px 0 0 0;
+}
+
+.friendsNone:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+.friendsNone h3 {
+	font-size: 1.4em;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	padding: 13px 10px 10px 10px !important;
+	display: block;
+}
+
+/* -- Guest Advice -- */
+
+/* Displays a message for guests to register - possibly obsolete? */
+
+.guestAdvice {
+	border-width: 1px 0 0 0;
+	border-style: dotted;
+	margin: 7px 0 0 0;
+	padding: 7px 0 0 0;
+}
+
+.guestAdvice:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+.guestAdvice h3 {
+	font-size: 1.4em;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	padding: 13px 10px 10px 10px !important;
+	display: block;
+}
+
+/* ### -- -- -- -- -- Dyn Container -- -- -- -- -- ### */
+
+/* -- General -- */
+
+/* Floating elements with dynamically changable widths (table-like) */
+
+.dynContainer {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* -- Dyn Item -- */
+
+.dynContainer .dynItem {
+	float: left;
+	overflow: hidden;
+}
+
+.dynItems5 .dynItem {
+	width: 20% !important;
+}
+
+.dynItems4 .dynItem {
+	width: 25% !important;
+}
+
+.dynItems3 .dynItem {
+	width: 33% !important;
+}
+
+.dynItems2 .dynItem {
+	width: 50% !important;
+}
+
+.dynItems1 .dynItem {
+	width: 100% !important;
+}
+
+/* -- Dyn Box -- */
+
+.dynContainer .dynItem .dynBox {
+	text-align: right;
+	line-height: 1.3em;
+	background-image: url("../images/friendsConnectionLine.png");
+	background-repeat: no-repeat;
+	background-position: 0 23px;
+	display: block;
+	float: right;
+	position: relative;
+	width: 100%;
+}
+
+.dynBox .dynBoxInner {
+	text-align: center;
+	background-image: url("../images/friendsConnectionArrow.png");
+	background-repeat: no-repeat;
+	background-position: 0 23px;
+	display: block;
+	float: right;
+	width: 75%;
+	min-width: 85px;
+}
+
+/* Dyn Box Links */
+
+.dynBoxInner a {
+	text-decoration: none;
+	display: block;
+}
+
+.dynBoxInner a:hover span {
+	text-decoration: none !important;
+}
+
+/* ### -- -- -- -- -- Thumbnail View -- -- -- -- -- ### */
+
+.thumbnailView li:after {
+	clear: none;
+	display: inline;
+}
+
+.thumbnailView li.floatedElement {
+	margin: 3px 0;
+	overflow: hidden;
+	padding: 0 0 5px 0;
+	text-align: center;
+	width: 20%;
+}
+
+.thumbnailView li.floatedElement a {
+	margin: 0 7px;
+	display: block;
+	overflow: hidden;
+}
+
+.thumbnailView li.floatedElement p {
+	margin: 0 7px;
+}
+
+.thumbnailView .thumbnail {
+	display: block;
+	height: 48px;
+	margin: 0 auto 3px auto;
+	position: relative;
+	width: 48px;
+}
+
+.thumbnailView .thumbnail img {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+}
+
+.thumbnailView.squared .thumbnail {
+	height: 75px !important;
+}
+
+/* ### -- -- -- -- -- Profile Signature -- -- -- -- -- ### */
+
+/* ToDo: 'signature' would probably better be a global declaration. -> see messages.css */
+
+#tplUserProfile .signature {
+	border-width: 1px 0;
+	margin-top: 7px;
+	margin-bottom: -6px;
+	padding: 7px 0;
+}
+
+/* ### -- -- -- -- -- User Guestbook -- -- -- -- -- ### */
+
+.guestBook .contentHeader, .guestBook .contentFooter {
+	margin-top: 7px;
+}
+
+.guestBook .message {
+	margin-bottom: 7px;
+}
+
+.guestBook .messageInner {
+	padding: 10px 20px !important;
+}
+
+/* Message Answeres */
+
+.guestBook .messageAnswer {
+	margin-left: 50px !important;
+	margin-bottom: 23px !important;
+}
+
+.guestBook .messageAnswer h4 {
+	display: inline !important;
+}
+
+.guestBook .messageAnswer p {
+	padding-bottom: 7px;
+}
+
+/* ### -- -- -- -- -- Member List (Whitelist / Blacklist) -- -- -- -- -- ### */
+
+.memberList {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.memberList:after {
+	content: "";
+	clear: both;
+	display: block;
+	height: 0;
+}
+
+.memberList li {
+	border: 1px;
+	margin: 5px 10px 5px 0;
+	padding: 1px;
+	display: block;
+	float: left;
+	position: relative;
+	width: 200px;
+}
+
+.memberList li .memberName {
+	text-decoration: none;
+	border-width: 0 1px 0 0;
+	border-style: solid;
+	padding: 3px 3px 3px 24px;
+	display: block;
+	width: 150px;
+	overflow: hidden;
+}
+
+.memberList li > img {
+	margin: -8px 4px 0 4px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+}
+
+.memberList li a > img {
+	border: none;
+	margin: -12px 4px 0 4px;
+	padding: 4px 3px;
+	position: absolute;
+	top: 50%;
+	right: -3px;
+}
+
+.memberList li .acceptButton img {
+	padding-right: 26px
+}
+
+/* ### -- -- -- -- -- Members List -- -- -- -- -- ### */
+
+.membersList td {
+	text-align: center;
+}
+
+.membersList td.columnUsername {
+	text-align: left;
+}
+
+.membersList td.columnAvatar {
+	height: 50px;
+}
+
+.memberList .memberListNoDelete .memberName {
+	border: 0;
+	width: 173px;
+}
+
+/* ### -- -- -- -- -- Avatar Show -- -- -- -- -- ### */
+
+.avatarShow {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+/* ### -- -- -- -- -- Avatar Select -- -- -- -- -- ### */
+
+.avatarSelect {
+	margin: 7px 0;
+	float: left;
+	clear: both;
+	display: block;
+}
+
+.avatarSelect ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.avatarSelect li {
+	margin: 0 7px 7px 0;
+	float: left;
+}
+
+.avatarSelect li label {
+	border-width: 1px;
+	padding: 1px;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	display: block;
+}
+
+.avatarSelect li label:hover {
+	cursor: pointer;
+}
+
+.avatarSelect li label input {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	z-index: 1;
+}
+
+.avatarSelect li label img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+/* ### -- -- -- -- -- User Groups List -- -- -- -- -- ### */
+
+.userGroupsList {
+	list-style-type: square;
+}
+
+.userGroupsList h4 {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.userGroupsList p {
+	margin-bottom: 5px;
+}
+
+.userGroupsList li {
+	margin-bottom: 5px;
+	clear: both;
+}
+
+.userGroupsList li .smallButtons {
+	float: right;
+	clear: both;
+	position: relative;
+}
+
+/* ### -- -- -- -- -- Style Preview -- -- -- -- -- ### */
+
+.stylePreviewImageContainer {
+	margin-top: 3px;
+}
+
+/* ### -- -- -- -- -- EOF -- -- -- -- -- ### */
