@@ -58,9 +58,9 @@ if(!file_exists("is-development"))
 else
 {
 	$db['default']['hostname'] = "localhost";
-	$db['default']['username'] = "valle";
-	$db['default']['password'] = "z3?Gf77n";
-	$db['default']['database'] = "emu-devstore";
+	$db['default']['username'] = "root";
+	$db['default']['password'] = "";
+	$db['default']['database'] = "emudevstore";
 }
 
 $db['default']['dbdriver'] = 'mysqli';
