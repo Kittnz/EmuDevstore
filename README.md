@@ -3,6 +3,11 @@
 
 EmuDevstore open source from http://emu-devstore.com/
 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo") TO-DO LIST
+==============
+- submit product category list unshown
+- website menu categories
+
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo") Public source:
 ==============
 
