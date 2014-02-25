@@ -2,5 +2,6 @@
 
 function cdn_url()
 {
-	return "http://emu-devstore.com/files/";
+    $url_cdn = base_url().'files/';
+	return $url_cdn;
 }
