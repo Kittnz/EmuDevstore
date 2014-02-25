@@ -5,7 +5,7 @@ EmuDevstore open source from http://emu-devstore.com/
 
 How to Install Database
 ==============
-Run `\sql\install_emudevstore.sql` from the source directory.
+Run `\sql\install_db_structure.sql` and `\sql\install_db_data.sql` from the source directory.
 
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo") Public source:
 ==============
