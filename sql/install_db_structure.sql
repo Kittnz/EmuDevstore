@@ -1,5 +1,4 @@
 
-
 -- Dumping structure for table emudevstore.categories
 DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
@@ -45,20 +44,6 @@ CREATE TABLE IF NOT EXISTS `daily_income` (
   `day` varchar(50) DEFAULT NULL,
   `amount` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-
--- Dumping structure for table emudevstore.menu
-DROP TABLE IF EXISTS `menu`;
-CREATE TABLE IF NOT EXISTS `menu` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `parent_id` int(11) NOT NULL,
-  `has_childs` int(11) NOT NULL DEFAULT '0',
-  `title` varchar(255) NOT NULL,
-  `short_title` varchar(255) NOT NULL,
-  `subtitle` varchar(255) NOT NULL,
-  `image` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 
 -- Dumping structure for table emudevstore.orders
