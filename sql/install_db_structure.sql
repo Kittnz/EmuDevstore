@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `screenshot` varchar(255) DEFAULT NULL,
   `download` varchar(500) DEFAULT NULL,
   `category_id` int(11) DEFAULT '1',
-  `description` varchar(50) DEFAULT NULL,
+  `description` varchar(5000) DEFAULT NULL,
   `paypal_email` varchar(50) DEFAULT NULL,
   `is_unique` tinyint(4) DEFAULT '0',
   `type` tinyint(4) DEFAULT '1',
