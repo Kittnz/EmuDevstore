@@ -25,18 +25,7 @@ class Category_model extends CI_Model
 	
 	public function getMainCategories()
 	{
-		return $this->db->query('
-			SELECT 
-				p.*,
-				IF(
-					(SELECT COUNT(*) FROM '.$this->db->dbprefix('categories').' WHERE parent_id = p.id) > 0,
-					1, 
-					0
-				) AS has_childs
-			FROM '.$this->db->dbprefix('categories').' p
-			WHERE parent_id IS NULL
-			')
-			->result_array();
+		return $this->db->query('SELECT * FROM '.$this->db->dbprefix('categories').' WHERE has_childs >0')->result_array();
 	}
 	
 	public function getSubcatsByParentId($parent_id, $count = true)
