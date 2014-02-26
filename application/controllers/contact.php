@@ -19,7 +19,7 @@ class contact extends CI_Controller
 		$output = $this->template->loadPage("contact", array('customer' => $customer));
 
 		$this->template->setTitle("Contact us - ".$this->config->item('site-title'));
-		$this->template->setHeadline("Contact us");
+		$this->template->setHeadline("Contact us: <span style='color:lime;'>".$this->config->item('contact-email')."</span>");
 		$this->template->setBigHeader(false);
 		$this->template->view($output);
 	}
