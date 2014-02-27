@@ -1,11 +1,5 @@
 <?php
-/* INSTALLER IN PROGRESS, AFTER EVERYTHING WORKS UNCOMMENT THIS LINE
-if(is_dir(__DIR__."/install") && !file_exists(__DIR__."/install/.lock"))
-{
-	header("Location: install");
-	die();
-}
- */
+
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
