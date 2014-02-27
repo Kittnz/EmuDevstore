@@ -1,4 +1,3 @@
-
 -- Dumping structure for table emudevstore2.categories
 DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
@@ -17,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
 -- Dumping structure for table emudevstore2.ci_sessions
 DROP TABLE IF EXISTS `ci_sessions`;
 CREATE TABLE IF NOT EXISTS `ci_sessions` (
-  `session_id` int(11) NOT NULL,
+  `session_id` varchar(50) NOT NULL,
   `ip_address` varchar(100) NOT NULL,
   `user_agent` varchar(255) NOT NULL,
   `last_activity` bigint(20) NOT NULL,
