@@ -107,70 +107,21 @@ class Install
 
 	private function config()
 	{
-		$owner = fopen("../application/config/owner.php", "w");
-		fwrite($owner, '<?php $config["owner"] = "'.addslashes($_POST['superadmin']).'";');
-		fclose($owner);
-
-		require_once('../application/libraries/configeditor.php');
-
-		$distConfig = '../application/config/fusion.php.dist';
-		$config = '../application/config/fusion.php';
+		$distConfig = '../application/config/database-production.php.dist';
+		$config = '../application/config/database-production.php';
+		
+        // preserve the original in-case they mess up the new one
 		if(file_exists($distConfig))
-			copy($distConfig, $config); // preserve the original in-case they mess up the new one
+			copy($distConfig, $config);
 
 		$config = new ConfigEditor($config);
 
 		$data['title'] = $_POST['title'];
-		$data['server_name'] = $_POST['server_name'];
-		$data['realmlist'] = $_POST['realmlist'];
-		$data['keywords'] = $_POST['keywords'];
-		$data['description'] = $_POST['description'];
-		$data['analytics'] = ($_POST['analytics']) ? $_POST['analytics'] : false;
-		$data['cdn'] = ($_POST['cdn'] == "yes") ? true : false;
-		$data['security_code'] = $_POST['security_code'];
+		$data['site_address'] = $_POST['site_address'];
 
 		foreach($data as $key => $value)
 		{
 			$config->set($key, $value);
-		}
-
-		if(in_array($_POST['emulator'], array('arcemu', 'summitemu')))
-		{
-			switch($_POST['expansion'])
-			{
-				case "wotlk":
-					$config->set('disabled_expansions', array(32));
-				break;
-
-				case "tbc":
-					$config->set('disabled_expansions', array(24,32));
-				break;
-
-				case "vanilla":
-					$config->set('disabled_expansions', array(8,24,32));
-				break;
-			}
-		}
-		else
-		{
-			switch($_POST['expansion'])
-			{
-				case "wotlk":
-					$config->set('disabled_expansions', array(3));
-				break;
-
-				case "tbc":
-					$config->set('disabled_expansions', array(2,3));
-				break;
-
-				case "vanilla":
-					$config->set('disabled_expansions', array(1,2,3));
-				break;
-
-				default:
-					$config->set('disabled_expansions', array());
-				break;
-			}
 		}
 
 		$config->save();
@@ -198,11 +149,11 @@ $db["cms"]["swap_pre"] = "";
 $db["cms"]["autoinit"] = TRUE;
 $db["cms"]["stricton"] = FALSE;
 
-$db["account"]["hostname"] = "'.$_POST['ftp_hostname'].'";
-$db["account"]["username"] = "'.$_POST['ftp_username'].'";
-$db["account"]["password"] = "'.$_POST['ftp_password'].'";
-$db["account"]["database"] = "'.$_POST['cdn_sendermail'].'";
-$db["account"]["port"]     = "'.$_POST['cdn_adminmail'].'";
+$db["account"]["hostname"] = "'.$_POST['realmd_hostname'].'";
+$db["account"]["username"] = "'.$_POST['realmd_username'].'";
+$db["account"]["password"] = "'.$_POST['realmd_password'].'";
+$db["account"]["database"] = "'.$_POST['realmd_database'].'";
+$db["account"]["port"]     = '.(is_numeric($_POST['realmd_port']) ? $_POST['realmd_port'] : self::MYSQL_DEFAULT_PORT).';
 $db["account"]["dbdriver"] = "mysqli";
 $db["account"]["dbprefix"] = "";
 $db["account"]["pconnect"] = TRUE;
