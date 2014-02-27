@@ -1,5 +1,6 @@
 
--- Dumping data for table emudevstore.categories: ~8 rows (approximately)
+
+-- Dumping data for table emudevstore2.categories: ~8 rows (approximately)
 INSERT INTO `categories` (`id`, `parent_id`, `has_childs`, `title`, `name`, `short_title`, `subtitle`, `image`) VALUES
 (1, 0, 1, 'Download', '', '', '', ''),
 (2, 1, 0, 'Designs & PSDs', '', '', 'Webtemplates, Logos, Full Websites, PSDs', 'psdtt.png'),
@@ -11,6 +12,6 @@ INSERT INTO `categories` (`id`, `parent_id`, `has_childs`, `title`, `name`, `sho
 (8, 4, 0, 'Modules', '', '', 'Fusion CMS Modules', 'fcms_modules.jpg');
 
 	
--- Dumping data for table emudevstore.customers: ~2 rows (approximately)
+-- Dumping data for table emudevstore2.customers: ~1 rows (approximately)
 INSERT INTO `customers` (`customer_id`, `real_name`, `email`, `website`, `password_sha1`, `rank`) VALUES
 (1, 'admin', 'admin@yahoo.com', '', 'd033e22ae348aeb5660fc2140aec35850c4da997', 2);

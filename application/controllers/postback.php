@@ -14,9 +14,6 @@ class Postback extends CI_Controller
 
 	// Config values
 	private $config_paypal;
-
-	// Debug
-	private $debug = false;
 	
 	/**
 	 * Initialize and prevent direct access
@@ -27,24 +24,6 @@ class Postback extends CI_Controller
 
 		$this->config_paypal = $this->config->item('paypal');
 
-		// Prevent direct access
-		if(count($_POST) == 0)
-		{
-			if($this->debug)
-			{
-				$_POST['custom'] = "55-5";
-				$_POST['payment_status'] = "Completed";
-				$_POST['mc_gross'] = 50.0; // I'm very generous
-				$_POST['mc_currency'] = "USD";
-				$_POST['txn_id'] = sha1(uniqid());
-				$_POST['receiver_email'] = "payments@codelicity.com";
-				$_POST['payer_email'] = "test@gmail.com";
-			}
-			else
-			{
-				die("No access");
-			}
-		}
 	}
 	
 	/**
