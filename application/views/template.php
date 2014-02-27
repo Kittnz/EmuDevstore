@@ -119,7 +119,6 @@
 								
 								<li><a href="<?php echo base_url(); ?>contact" <?php if($controller == "contact"){ ?>class="active"<?php } ?>>Contact</a></li>
 								<li><a href="<?php echo base_url(); ?>info/guide" <?php if($this->uri->uri_string() == "info/guide"){ ?>class="active"<?php } ?>>Guide</a></li>
-								<li><a href="<?php echo base_url(); ?>forum">Forums</a></li>
 							</ul>
 						</aside>
 					

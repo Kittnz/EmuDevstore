@@ -1,3 +1,0 @@
-<li{if $action == 'notActivated'} class="activeSubTabMenu"{/if}><a href="index.php?page=UserList&amp;action=notActivated&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}"><span>{lang}wcf.acp.user.list.notActivated{/lang}</span></a></li>
-<li{if $action == 'new'} class="activeSubTabMenu"{/if}><a href="index.php?page=UserList&amp;action=new&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}"><span>{lang}wcf.acp.user.list.new{/lang}</span></a></li>
-<li{if $action == 'banned'} class="activeSubTabMenu"{/if}><a href="index.php?page=UserList&amp;action=banned&amp;packageID={@PACKAGE_ID}{@SID_ARG_2ND}"><span>{lang}wcf.acp.user.list.banned{/lang}</span></a></li>
