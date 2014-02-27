@@ -31,9 +31,7 @@ class User
 			$this->rank = 0;
 			$this->website = false;
 			$this->password = false;
-
 			$this->products = array();
-
 			$this->online = false;
 		}
 	}
@@ -50,7 +48,7 @@ class User
 		$this->id = $account['customer_id'];
 		$this->email = $account['email'];
 		$this->name = $account['real_name'];
-		$this->rank = ($account['rank'] == 0) ? 1 : $account['rank'];
+		$this->rank = $account['rank'];
 		$this->website = $account['website'];
 		$this->password = $account['password_sha1'];
 		$this->online = true;
