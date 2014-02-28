@@ -55,14 +55,14 @@ class Account extends CI_Controller
 
 		if($this->user->hasProduct($id) || $product['price'] == 0 || $this->user->getRank() >= 2)
 		{
-			$basedir = $_SERVER['DOCUMENT_ROOT']."/files";
-			$filename = sprintf("%s/%s", $basedir, $product['download']);
-			header("Content-Type: application/zip");
-			$save_as_name = basename($product['name']).".zip";
-			header("Content-Length: ".filesize("/".$filename));  
-			header("Content-Disposition: attachment; filename=\"$save_as_name\"");
-			readfile("/".$filename);
-			//header("Location: ".cdn_url().$product['download']);
+			//$basedir = $_SERVER['DOCUMENT_ROOT']."/files";
+			//$filename = sprintf("%s/%s", $basedir, $product['download']);
+			//header("Content-Type: application/zip");
+			//$save_as_name = basename($product['name']).".zip";
+			//header("Content-Length: ".filesize("/".$filename));  
+			//header("Content-Disposition: attachment; filename=\"$save_as_name\"");
+			//readfile("/".$filename);
+			header("Location: ".cdn_url().$product['download']); // let's use this for the moment untill we fix that way
 		}
 		else
 		{
