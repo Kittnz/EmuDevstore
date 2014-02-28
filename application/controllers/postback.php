@@ -120,23 +120,6 @@ class Postback extends CI_Controller
 				$error = "User paid too little (USD ".$this->payment_amount.")";
 			}
 
-			// V6 upgrade: make sure user has V5
-			if($product['id'] == 4
-			&& !$this->user->hasProduct(5, $this->userId)
-			&& !$this->user->hasProduct(6, $this->userId))
-			{
-				$error = "Missing FusionCMS V5";
-			}
-
-			// Themes and modules: make sure user has V6
-			if(in_array($product['type'], array(1,2))
-			&& !$this->user->hasProduct(4, $this->userId)
-			&& !$this->user->hasProduct(36, $this->userId)
-			&& !$this->user->hasProduct(3, $this->userId))
-			{
-				$error = "Missing FusionCMS V6";
-			}
-
 			if($this->user->hasProduct($this->productId, $this->userId))
 			{
 				$error = "Has already bought this product";
@@ -166,7 +149,7 @@ class Postback extends CI_Controller
 			}
 			else
 			{
-				/*if($this->debug)
+				if($this->debug)
 				{
 					$this->processVerified();
 				}
@@ -191,14 +174,14 @@ class Postback extends CI_Controller
 					if(strcmp($res, "VERIFIED") == 0) 
 					{*/
 						$this->processVerified();
-				/*	}
+				}
 					elseif(strcmp($res, "INVALID") == 0)
 					{
 						$this->processInvalid();
 					}
 				}
 
-				$this->processFailed($header, $req, $out);*/
+				$this->processFailed($header, $req, $out);
 				fclose($fp);
 			}
 		}

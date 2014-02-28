@@ -55,17 +55,14 @@ class Account extends CI_Controller
 
 		if($this->user->hasProduct($id) || $product['price'] == 0 || $this->user->getRank() >= 2)
 		{
-			//new way, more safety than the old methode :)
-			//$basedir = $_SERVER['DOCUMENT_ROOT']."/files";
-			//$filename = sprintf("%s/%s", $basedir, $product['download']);
-			//header("Content-Type: application/zip");
-			//$save_as_name = basename($product['name']).".zip";
-			//header("Content-Length: ".filesize($filename));  
-			//header("Content-Disposition: attachment; filename=\"$save_as_name\"");
-			//readfile($filename);
-			
-			//old way, very insecure xDD
-			header("Location: ".cdn_url().$product['download']);
+			$basedir = $_SERVER['DOCUMENT_ROOT']."/files";
+			$filename = sprintf("%s/%s", $basedir, $product['download']);
+			header("Content-Type: application/zip");
+			$save_as_name = basename($product['name']).".zip";
+			header("Content-Length: ".filesize("/".$filename));  
+			header("Content-Disposition: attachment; filename=\"$save_as_name\"");
+			readfile("/".$filename);
+			//header("Location: ".cdn_url().$product['download']);
 		}
 		else
 		{
