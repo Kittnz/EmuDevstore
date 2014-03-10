@@ -131,16 +131,7 @@
 						<section class="center">
 							<h1><?php echo $headline ?></h1>
 							<aside class="right" <?php if(!$hasBigHeader) {?>style="display:none;"<?php } ?>>
-								<h2>
-									A Store for Users & Devs<br >
-									Easy Registration & User Panel<br >
-									<br >
-									A Professional Emu-Store to buy & sell<br >
-									clean scripts, cores & databases.<br >
-									EDS Smart handling for both sites!<br >
-								</h2>
-								
-
+								<h2><?php echo $this->config->item('site-slogan');?></h2>
 							</aside>
 							<div class="clear"></div>
 						</section>

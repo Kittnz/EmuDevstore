@@ -12,7 +12,10 @@ $config['paypal'] = array(
 
 //Global
 $config['site-title'] = "Your site title";
+$config['site-slogan'] = "Short description about your website such a slogan</br> </br>html allowed :)"; // allowed html
 $config['contact-email'] = "mail@example.com";
+// ranks: 0 buyer, 1 vendor, 2 manager, 3 admin
+$config['register_rank'] = 1; // default rank when user register new account
 
 // CDN
 $config['ftp_hostname'] = "ftp";

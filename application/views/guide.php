@@ -80,8 +80,7 @@
 <div id="announcement">
 	<h1>Guidelines</h1>
 
-<p>We are happy to announce that tomorrow we are releasing a brand new Emu-Dev Store&copy;. The site contains features like no other, we plan to be the leading source for all cores of all expansions where users and developers alike can buy/sell repacks, custom core source code, custom scripts, world of warcraft website themes, modules & content and much more! Or even share content for free! When we officially release we will post a link here for everyone to check it out!
-We will also be providing the service of configuring your website, forums & server for a small price. Emu-Dev Store&copy; is dedicated to making emulation what it is should be - Simple!</p><br>
+<p style="color:red;"><i>Type your guidelines here.. To do this go to <b>application/views/guide.php</b> and edit this.</i></p><br>
 
 <h1>Frequently Asked Questions</h1>
 
@@ -91,7 +90,7 @@ We will also be providing the service of configuring your website, forums & serv
         <span class="answer">No, uploading and hosting your products is 100% Free!</span>
     </li>
     <li>
-        If I sell a product, do I have to pay a something to Emu-Devstore?<br>
+        If I sell a product, do I have to pay a something to this site?<br>
         <span class="answer">No, you enter your paypal email by uploading a product and the full<br>
         money will go directly to your paypal account!</span>
     </li>
@@ -116,21 +115,21 @@ the delete button. You have to agree once to delete a product!</span>
 to all ofhis listed products.</span>
     </li>
     <li>
-        I got a problem with a product, can Emu-Devstore give me support?<br>
+        I got a problem with a product, can this site give me support?<br>
         <span class="answer">No, we are not able to give support to thirdparty products.<br>
 Please contact the owner of that product, he will give support for it!<br>
-- Yes, if this product where uploaded by the user "Emu-Devstore".<br>
+- Yes, if this product where uploaded by this site owner.<br>
 In this case fell free to contact us using our <a href="<?php echo site_url('contact'); ?>">contact form</a>.</span>
     </li>
     <li>
         Can I upload stuff from other games?<br>
-        <span class="answer">No, because Emu-Devstore is a WoW based Store!</span>
+        <span class="answer">No, because this site is a WoW based Store!</span>
     </li>
     <li>
         I uploaded a product, but it is not online, why?<br>
         <span class="answer">If you go to "my products" you should see one of the 2 reasons<br>
-your product isn't online jet. First could be the reason your product<br>
-was not approved by a Evo-Devstore member jet, or the second reason is<br>
+your product isn't online yet. First could be the reason your product<br>
+was not approved by a Market Manager yet, or the second reason is<br>
 your product was checked and it not agreed with our guidelines got denied!</span>
     </li>
     <li>
@@ -161,10 +160,10 @@ email, your displayname, your website and your password.</span></p>
 <h1>Disclaimer</h1>
 
 <ul>
-    <li>Emu Devstore does not deal with thirdparty products &mdash; We are just a platform!</li>
+    <li>This site does not deal with thirdparty products &mdash; We are just a platform!</li>
     <li>Product or purchasing problems have to be resolved with the product owners</li>
-    <li>Emu Devstore is not accountable for the thirdparty products</li>
-    <li>All Emu Devstore products are tested and should just be downloaded from our site</li>
+    <li>This site is not accountable for the thirdparty products</li>
+    <li>All products on this website are tested and should just be downloaded from our site</li>
     <li>We will not give any support for thirdparty products</li>
 </ul>
 </div>

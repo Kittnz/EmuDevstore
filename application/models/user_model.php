@@ -58,7 +58,8 @@ class User_model extends CI_Model
 		$data = array(
 			'email' => $email,
 			'password_sha1' => $password,
-			'real_name' => $real_name
+			'real_name' => $real_name,
+			'rank' => $this->config->item('register_rank')
 		);
 
 		$this->db->insert("customers", $data);

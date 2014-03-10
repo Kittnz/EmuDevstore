@@ -1,6 +1,6 @@
 <?php
 
-class Admin extends CI_Controller
+class Manager extends CI_Controller
 {
 	private $xavierRemoved;
 	private $jesperRemoved;
@@ -12,7 +12,7 @@ class Admin extends CI_Controller
 
 		$this->user->requireOnline();
 
-		if($this->user->getRank() < 3) // has to be rank 3 to access the admin panel
+		if($this->user->getRank() < 2)
 		{
 			die('<script type="text/javascript">alert(\'Sorry, cool guys only\');window.location=\''.base_url().'\'</script>');
 		}
@@ -21,80 +21,6 @@ class Admin extends CI_Controller
 	}
 
 	public function index()
-	{
-		$dailyIncome = $this->main_model->getAllDailyIncome();
-
-		$last = 0;
-
-		$graph = "";
-
-		if($dailyIncome)
-		{
-			foreach($dailyIncome as $k => $day)
-			{
-				$last += $day['amount'];
-				$dailyIncome[$k]['amount'] = $last;
-
-				if(!$graph)
-				{
-					$graph = $dailyIncome[$k]['amount'];
-				}
-				else
-				{
-					$graph .= ",".$dailyIncome[$k]['amount'];
-				}
-			}
-		}
-
-		$v6 = $this->main_model->getIncome(3); // FusionCMS V6
-		$v6_upgrade = $this->main_model->getIncome(4); // FusionCMS V6 upgrade
-
-		$v6_preorders = $this->main_model->getIncome(8); // FusionCMS V6 release bundle
-		$v6_promo = $this->main_model->getIncome(36); // FusionCMS V6 christmas promotion
-
-		$v6_raxezwow = $this->main_model->getIncome(1); // RaxeZWoW theme
-		$v6_blueweb = $this->main_model->getIncome(2); // BlueWeb theme
-
-		$total = $v6 + $v6_upgrade + $v6_preorders + $v6_promo + $v6_raxezwow + $v6_blueweb;
-
-		$failed_q = $this->db->query("SELECT paypal_logs.*, products.name FROM paypal_logs, products WHERE paypal_logs.validated=0 AND paypal_logs.product_id=products.id");
-		
-		if($failed_q->num_rows())
-		{
-			$failed = $failed_q->result_array();
-		}
-		else
-		{
-			$failed = false;
-		}
-
-		$data = array(
-			'graph' => $graph,
-			'graph_top' => $last,
-			'last_date' => ($dailyIncome) ? $dailyIncome[count($dailyIncome)-1]['day'] : date("Y-m-d"),
-			'total' => $total,
-			'failed' => $failed
-		);
-
-		$output = $this->template->loadPage("admin", $data);
-		
-		$this->template->setTitle("Dashboard - ".$this->config->item('site-title'));
-		$this->template->setHeadline("Hey there handsome!");
-		$this->template->setBigHeader(false);
-		$this->template->view($output);
-	}
-
-	public function live()
-	{
-		$output = $this->template->loadPage("live");
-		
-		$this->template->setTitle("Dashboard - ".$this->config->item('site-title'));
-		$this->template->setHeadline('Watch the money flow!');
-		$this->template->setBigHeader(false);
-		$this->template->view($output);
-	}
-	
-	public function pending()
 	{
 		$notValidatedThemes = $this->product_model->getNotValidated();
 		
@@ -109,7 +35,7 @@ class Admin extends CI_Controller
 		$this->template->setBigHeader(false);
 		$this->template->view($output);
 	}
-	
+
 	public function approve($id)
 	{
 		if($this->product_model->approve($id))
@@ -163,21 +89,6 @@ class Admin extends CI_Controller
 		{
 			return false;
 		}
-	}
-
-	public function getTotal()
-	{
-		$v6 = $this->main_model->getIncome(3);
-		$v6_upgrade = $this->main_model->getIncome(4);
-
-		$v6_bundle = $this->main_model->getIncome(8);
-
-		$v6_raxezwow = $this->main_model->getIncome(1);
-		$v6_blueweb = $this->main_model->getIncome(2);
-
-		$total = $v6 + $v6_upgrade + $v6_raxezwow + $v6_blueweb + $v6_bundle;
-
-		die((string)$total);
 	}
 
 	public function complete($id)

@@ -1,29 +1,29 @@
 <br><br><div class="clear"></div>
 <section class="full">
 	<aside class="right" id="quotes">
-		<br><br><blockquote>
-			Updated & Professional Databases for all Patches!
-			<span>
-				– Classic, TBC, Wotlk, Cata, MoP
-			</span>
-		</blockquote>
+		<?php 	
 		
-		<blockquote>
-			Clean coded fun scripts for each core!
-			<span>
-				– Trinity, ArcEmu, MaNGoS, Skyfire...
-			</span>
-		</blockquote>
-
-		<blockquote>
-			Stable & Clean Cores for all known Patches!
-			<span>
-				– Trinity, ArcEmu, MaNGoS, Skyfire...
-			</span>
-		</blockquote>
-
+		echo '<span style="font-size:20px;font-weight:bold;float:left;margin-top:-15px;text-shadow: 1px 1px 3px purple;">Latest Submissions</span></br>';
+		
+		$query = $this->db->query("SELECT * FROM products WHERE validated!=0 ORDER BY id DESC LIMIT 4", array());
+		
+		$latestproducts = $query->result_array();
+		
+		if($query->num_rows() > 0) {
+		foreach ($latestproducts as $product){
+			echo '<a href="'.base_url().'Product/'.url_title($product['name']).'-'.$product['id'].'">
+			<span style="color:purple;font-weight:bold;top:-5px;">'.$product['name'].'</span></a>
+			</br><blockquote>
+			<a href="'.base_url().'Product/'.url_title($product['name']).'-'.$product['id'].'"><img src="'.cdn_url().$product['thumbnail'].'"/></a>
+			</span></blockquote>';
+			}
+		}
+		else {
+			echo '<span style="font-weight:bold;color:#FF0000;";>no submissions..</span>';
+		}
+		?>
 	</aside>
-
+	<div div="ad_banner"><a href="contact"><img src="static/images/banner_default.png"></a></div>
 	<section id="gallery">
 		<div id="gallery_wrapper">
 			<img src="<?php echo base_url(); ?>static/images/slides/1.jpg">
@@ -38,7 +38,7 @@
 <div class="clear"></div>
 
 <aside class="left" id="reasons">
-	<h1>What can you find on Emu-Devstore?</h1>
+	<h1>What can you find on <?php echo $this->config->item('site-title');?>?</h1>
 	<ul>
 		<li>
 			<img src="<?php echo base_url(); ?>static/images/icons/cursor.png">

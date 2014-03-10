@@ -121,6 +121,18 @@ class User
 			return false;
 		}
 	}
+	
+	public function isMarketManager()
+	{
+		if($this->rank >= 2)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 
 	/**
 	 * Whether or not the user is an administrator
@@ -128,7 +140,7 @@ class User
 	 */
 	public function isAdmin()
 	{
-		if($this->rank >= 2)
+		if($this->rank >= 3)
 		{
 			return true;
 		}

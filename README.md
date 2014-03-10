@@ -22,6 +22,6 @@ Don't forget you need a functionally FTP server!
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo") Public source:
 ==============
 
-![alt text](http://i.imgur.com/h5mAQ0B.png "Logo")
+![alt text](http://i.imgur.com/LBX3aMf.png "Logo")
 
 ![alt text](http://i.imgur.com/Uu00Fh0.png "Logo")
